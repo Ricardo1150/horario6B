@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas</title>
+
+    <style>
+        
+        h2 {
+            text-align: center;
+        }
+
+        table{
+            font-family: sans-serif;
+            border: 3px solid grey;
+            border-collapse: collapse;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        caption{
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        th, 
+        td{
+            border: 3px solid black;
+            padding: .80rem;
+            font-weight: bold;
+        }
+
+
+        td:first-child, th, tfoot{
+            background-color: purple;
+        }
+
+        .horario{
+            color: white;
+            font-weight: bold;
+        }
+
+        .dias{
+            color: whitesmoke;
+        }
+
+        .virtual{
+            color: yellow;
+            font-weight: bold;
+        }
+
+        tfoot{
+            color: white;
+            font-weight: bold;
+   
+        }
+
+        .clase{
+            background-color: darkorchid;
+        }
+
+        .morada{
+            background-color: darkorchid;
+        }
+
+        span{
+            border-radius: 10px 10px 10px 10px;
+            -moz-border-radius: 10px 10px 10px 10px;
+            -webkit-border-radius: 10px 10px 10px 10px;
+            border: .1rem solid black;
+            border-collapse: collapse;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 7px;
+            width: 50%;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        Las tablas en html sirven para mostrar contenido tabulado.
+        La estructurta basica de una tabla se compone de:
+        
+        table -> Etiqueta que encierra una tabla.
+
+        tr -> table row, etiqueta que construye una fila.
+
+        td -> table data, etiqueta que construye una celda
+
+        truco: El numero de celdas dentro d eun td establecera el numero de columnas de la tabla.
+
+        Los titulos de las tablas se establecen con la etiqueta "caption", es una etiqueta opcional, y segun la especificaicon de etiqueta se colocan justo despues de la etiqueta "table".
+
+        Las cabeceras de las tablas se establecen con la etiqueta "thead".
+        Dentro tendremos una etiqueta "tr" normal, pero en el caso de las celdas, las estableceremos con la etiqueta "th" en lugar de "td"
+
+        De forma opcional podemos colocar un "tfoot" a la tabla para establecer un pie de tabla, esto es algo que algunas tablas tienen (como suma de cantidades o total, etc).
+
+        Para hacer que las celdas ocupen mas de una fila o mas de una columna tenemos 2 atributos:
+
+        "rowspan": Sirve para que una celda ocupe mas de una fila, el valor por defecto es 1.
+
+        "colspan": Sirve para que una celda ocupe mas de una columna, el valor por defecto es 1.
+    -->
+
+    <h1>
+        Universidad Politecnica de Durango
+    </h1>
+
+    <h2>   
+        Grupo 6°B ingenieria en software.
+    </h2>
+
+    <div>
+
+    
+
+    <table>
+
+        <caption>
+            <b>
+                HORARIO DE CLASES
+            </b> 
+        </caption>
+        
+        <colgroup>
+            <col span="7">
+            <col>
+        </colgroup>
+
+        <thead>
+            <tr>
+                <th class="virtual">Virtuales</th>
+                <th class="dias">Lunes</th>
+                <th class="dias">Martes</th>
+                <th class="dias">Miercoles</th>
+                <th class="dias">Jueves</th>
+                <th class="dias">Viernes</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <td class="horario">10:10 - 11:00</td>
+                <td class="clase">Ingles</td>
+                <td class="clase">Ingles</td>
+                <td>Ingles</td>
+                <td>Ingles</td>
+                <td>Ingles</td>
+            </tr>
+            
+            <tr>
+                <td class="horario">11:00 - 11:50</td>
+                <td>Habilidades Gerenciales</td>
+                <td>Redes</td>
+                <td class="clase">Habilidades Gerenciales</td>
+                <td>Calidad de SW</td>
+                <td>Habilidades Gerenciales</td>
+            </tr>
+            
+            <tr>
+                <td class="horario">11:50 - 12:40</td>
+                <td class="clase">Arq. de Comp.</td>
+                <td class="clase">Calidad de SW</td>
+                <td class="clase">Prob. y Estad.</td>
+                <td class="clase">Calidad de SW</td>
+                <td>Redes</td>
+            </tr>
+            
+            <tr>
+                <td class="horario">12:40 - 1:30</td>
+                <td class="clase">Calidad de SW</td>
+                <td class="clase">Prob. y Estad.</td>
+                <td>Prob. y Estad.</td>
+                <td>Prob. y Estad.</td>
+                <td>Redes</td>
+            </tr>
+            
+            <tr>
+                <td class="horario">1:30 - 2:20</td>
+                <td class="clase">Calidad de SW</td>
+                <td>Prob. y Estad.</td>
+                <td></td>
+                <td class="clase">Redes</td>
+                <td class="clase">Calidad de SW</td>
+            </tr>
+            
+            <tr>
+                <td class="horario">2:20 - 3:10</td>
+                <td></td>
+                <td>Arq. de Comp.</td>
+                <td></td>
+                <td class="clase">Redes</td>
+                <td class="clase">Arq. de Comp.</td>
+            </tr>
+
+            <tr>
+                <td class="horario">3:10 - 4:00</td>
+                <td></td>
+                <td>Arq. de Comp.</td>
+                <td></td>
+                <td>Redes</td>
+                <td class="clase">Arq. de Comp.</td>
+            </tr>
+
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td colspan="4">Total de asignaturas:</td>
+                <td colspan="2">5</td>
+            </tr>
+        </tfoot>
+    </table>
+
+</div>
+
+<div>
+    <h3>
+        <span class="morada">Clases obligatorias</span>
+        <span>Resto de clases</span>
+    </h3>
+</div>
+        
+    </body>
+    </html>
